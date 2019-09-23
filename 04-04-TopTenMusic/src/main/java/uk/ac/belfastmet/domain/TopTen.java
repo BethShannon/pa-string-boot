@@ -29,7 +29,7 @@ public class TopTen {
 		public void setNumber(String number) {
 			this.number = number;
 		}
-		
+			
 		public String getArtist() {
 			return artist;
 		}

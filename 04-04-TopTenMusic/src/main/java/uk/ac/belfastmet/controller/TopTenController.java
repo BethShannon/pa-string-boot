@@ -13,35 +13,43 @@ import uk.ac.belfastmet.service.TopTenService;
 public class TopTenController {
 	Logger logger = LoggerFactory.getLogger(TopTenController.class);
 
-	@GetMapping("index")
+	@GetMapping("/index")
 	public String homePage() {
 		logger.info("An Info message beth");
 		return "index";
 
 	}
-	
-	@GetMapping("index2")
+	/**
+	 * 
+	 * @return This method is getting the index2 file
+	 */
+
+	@GetMapping("/index2")
 	public String homePage2() {
 		logger.info("An Info message beth");
 		return "index2";
 
 	}
-	
-	@GetMapping("/artist")
-	public String artistsPage(Model model) {
+	/**
+	 * 
+	 * @param model 
+	 * @return This method gets the artist file
+	 */
 
+	@GetMapping("/artist")
+	public String artistPage(Model artistModel) {
 		TopTenService toptenservice = new TopTenService();
-		model.addAttribute("pageTitle", "Artist");
-		model.addAttribute("Artist", toptenservice.getArtistTopTen());
+		artistModel.addAttribute("pageTitle", "artist");
+		artistModel.addAttribute("artist", toptenservice.getArtistTopTen());
 		return "artist";
 	}
 
 	@GetMapping("/album")
-	public String tolkienPage(Model model) {
+	public String albumPage(Model albumModel) {
 
 		TopTenService toptenservice = new TopTenService();
-		model.addAttribute("pageTitle", "Album");
-		model.addAttribute("Album", toptenservice.getAlbumTopTen());
+		albumModel.addAttribute("pageTitle", "album");
+		albumModel.addAttribute("album", toptenservice.getAlbumTopTen());
 
 		return "album";
 	}

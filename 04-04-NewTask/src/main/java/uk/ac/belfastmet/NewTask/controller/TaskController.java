@@ -23,7 +23,7 @@ public class TaskController {
 	public String firstlistPage(Model firstmodel) {
 		
 		TaskService firstTask = new TaskService();
-		firstmodel.addAttribute("pageTitle", "List No 1.");
+		firstmodel.addAttribute("pageTitle", "List No.1");
 		firstmodel.addAttribute("firstlist", firstTask.getFirstTask());
 
 		return "firstlist";

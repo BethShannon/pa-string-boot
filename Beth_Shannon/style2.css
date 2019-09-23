@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  width: 55%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.main {
+  width: 45%;
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}

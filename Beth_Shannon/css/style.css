@@ -1,0 +1,167 @@
+
+.body{
+	background-color: white;
+}
+.red { 
+color: #00b8ce;
+ }
+
+.header2, new {
+  padding: 5px;
+  background: white;
+  color: black;
+  font-size: 20px; 
+
+
+}
+
+.header {
+
+  overflow: hidden;
+  background-color: white;
+  padding: 10px;
+}
+.intro{
+	background-color:white;
+	color: #5d5d5d;
+	padding-top: 20px;
+	padding-left:50px;
+	padding-right:50px;
+	padding-bottom:20px;
+	text-align: center;
+	font-size: 35px;
+font-family: Verdana;
+ line-height: 2;
+
+}
+.tree{
+	float:center-left;
+
+}
+/* Style the header links */
+.header a {
+  float: left;
+  color: #5d5d5d;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 30px; 
+  line-height: 15px;
+font-family: Verdana;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+	color: #5d5d5d;
+  font-size: 40px;
+  
+ 
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+
+  color: #00b8ce;
+}
+
+/* Style the active/current link*/
+.header a:active {
+
+  color: #00b8ce;
+ 
+
+}
+
+/* Float the link section to the right */
+.header-right {
+	padding-right: 30px;
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+
+
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 80vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+  font-family: Verdana;
+ 
+}
+
+.box > img, .box a > img {
+  width: 150%;
+  height: calc(100% - 10vh);
+  object-fit: cover; 
+  transition: .5s;
+}
+
+.box > span, .box a > span {
+  font-size: 22px;
+  display: block;
+  padding-top: 15px;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+ * {
+  box-sizing: border-box;
+}
+
+.menu {
+	color: #5d5d5d;
+	  font-size: 30px;
+font-family: Verdana;
+  width: 55%;
+  float: left;
+ padding-left: 40px;
+
+}
+
+.main {
+	
+	color: #5d5d5d;
+	font-size: 16px;
+	font-family: Verdana;
+  width: 45%;
+  float: left;
+  padding: 15px;
+
+}
+

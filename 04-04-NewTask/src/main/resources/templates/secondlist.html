@@ -16,10 +16,11 @@
 </head>
 
 <body>
-<img src="/img/tick.jpg" class="img-fluid" alt="Responsive image" width= "100%">
+<img src="/img/mylists.jpg" class="img-fluid" alt="Responsive image" width= "100%">
 <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
   <ul class="navbar-nav">
     <li class="nav-item active">
+    
       <a class="nav-link" href="/index">Home</a>
     </li>
     <li class="nav-item">
@@ -32,7 +33,7 @@
 </nav>
 <div class="jumbotron text-center">
 
-<h1 th:text="'Hello, ' +${pageTitle2}"> (50px)</h1>
+<h1 th:text="${pageTitle2}"></h1>
 <h2></h2>
 <br />
 

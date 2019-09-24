@@ -1,17 +1,20 @@
 package uk.ac.belfastmet.NewTask.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import uk.ac.belfastmet.NewTask.service.TaskService;
 
 @Controller
 @RequestMapping
 
 public class TaskController {
-
+	
+	@Autowired
+	private TaskService taskService;
+	
 	@GetMapping ("/index")
 	public String homePage() {
 
@@ -25,9 +28,9 @@ public class TaskController {
 	@GetMapping ("/firstlist")
 	public String firstlistPage(Model firstmodel) {
 		
-		TaskService firstTask = new TaskService();
+		taskService.getNumberofTasks();
 		firstmodel.addAttribute("pageTitle", "List No.1");
-		firstmodel.addAttribute("firstlist", firstTask.getFirstTask());
+		firstmodel.addAttribute("firstlist", taskService.getFirstTask());
 
 		return "firstlist";
 	}
@@ -35,9 +38,9 @@ public class TaskController {
 	@GetMapping ("/secondlist")
 	public String secondlistPage(Model secondmodel) {
 		
-		TaskService secondTask = new TaskService();
+		//TaskService secondTask = new TaskService();
 		secondmodel.addAttribute("pageTitle2", "List No.2");
-		secondmodel.addAttribute("secondlist", secondTask.getSecondTask());
+		secondmodel.addAttribute("secondlist", taskService.getSecondTask());
 		
 		return "secondlist";
 		

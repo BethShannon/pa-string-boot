@@ -2,11 +2,17 @@ package uk.ac.belfastmet.NewTask.domain;
 
 public class Task {
 
-	String description;
-	String name;
-	String user;
-	String priority;
-	Boolean completionStatus;
+	private String description;
+	private String name;
+	private String user;
+	private String priority;
+	private Boolean completionStatus;
+	
+	
+	//good practice to put in a default constructor
+//	public Task() {
+//		super();
+//	}
 	
 	public Task(String description, String name, String user, String priority, Boolean completionStatus) {
 		super();
@@ -18,7 +24,6 @@ public class Task {
 	
 	}
 	
-
 	/**
 	 * @return the description
 	 */
@@ -77,16 +82,20 @@ public class Task {
 
 	/**
 	 * @return the completionStatus
+	 * 
 	 */
-	public Boolean getCompletionStatus() {
+
+	public Boolean isCompletionStatus() {
 		return completionStatus;
 	}
 
 	/**
 	 * @param completionStatus the completionStatus to set
 	 */
-	public void setCompletionStatus(Boolean completionStatus) {
+	public void isCompletionStatus(Boolean completionStatus) {
 		this.completionStatus = completionStatus;
 	}
-	}
+	
+	
+}
 

@@ -92,7 +92,7 @@ public class Task {
 	/**
 	 * @param completionStatus the completionStatus to set
 	 */
-	public void isCompletionStatus(Boolean completionStatus) {
+	public void getCompletionStatus(Boolean completionStatus) {
 		this.completionStatus = completionStatus;
 	}
 	

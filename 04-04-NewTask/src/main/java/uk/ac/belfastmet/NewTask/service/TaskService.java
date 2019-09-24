@@ -32,6 +32,6 @@ public class TaskService {
 		return this.secondTask;
 	}
 }
-
-
+// new array getTasks(); using an if (task.iscomplete) taskNew.add(task);
+// use ! as not complete
 	

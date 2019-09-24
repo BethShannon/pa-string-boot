@@ -53,12 +53,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="firstName : ${secondlist}">
-					<td th:text="${firstName.name}">List</td>
-					<td th:text="${firstName.description}">List</td>
-					<td th:text="${firstName.user}">List</td>
-					<td th:text="${firstName.priority}">List</td>
-					<td th:text="${firstName.completionStatus}">List</td>
+				<tr th:each="task : ${secondlist}">
+					<td th:text="${task.name}">List</td>
+					<td th:text="${task.description}">List</td>
+					<td th:text="${task.user}">List</td>
+					<td th:text="${task.priority}">List</td>
+					<td th:text="${task.completionStatus}">List</td>
 				</tr>
 			</tbody>
 		</table>

@@ -46,6 +46,7 @@
 			<thead>
 				<tr>
 					<th>Name</th>
+					<th>Author</th>
 					<th>Picture</th>
 				</tr>
 			</thead>
@@ -53,6 +54,7 @@
 				<tr th:each="dwarf: ${dwarfs}">
 
 					<td th:text="${dwarf.name}">Happy</td>
+						<td th:text="${dwarf.author}">List</td>
 					<td><img src="..static/img/Thorin.png" th:src="@{/img/} + ${dwarf.image}"></img></td>
 				</tr>
 			</tbody>

@@ -2,17 +2,21 @@ package uk.ac.belfastmet.dwarfs.service;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uk.ac.belfastmet.dwarfs.domain.Dwarf;
 
 @Service
 public class DwarfService {
 
-	private ArrayList<Dwarf> disneyDwarfs; // Instance variables
-	private ArrayList<Dwarf> tolkienDwarfs;
+	@Autowired
+	private DwarfRepository dwarfRepository;
+	private static Logger logger = LoggerFactory.getLogger(dwarfsservice.class)
+	//private ArrayList<Dwarf> disneyDwarfs; // Instance variables
+	//private ArrayList<Dwarf> tolkienDwarfs;
 
 
-	public ArrayList<Dwarf> getDisneyDwarfs(){
+	/*public ArrayList<Dwarf> getDisneyDwarfs(){
 
 		this.disneyDwarfs = new ArrayList<Dwarf>();
 

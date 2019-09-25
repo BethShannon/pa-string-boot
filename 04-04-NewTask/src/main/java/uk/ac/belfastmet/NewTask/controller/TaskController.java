@@ -28,9 +28,9 @@ public class TaskController {
 	@GetMapping ("/firstlist")
 	public String firstlistPage(Model firstmodel) {
 
-		taskService.getNumberofTasks();
+		taskService.getFirstNumberofTasks();
 		firstmodel.addAttribute("pageTitle", "List No.1");
-		firstmodel.addAttribute("firstlist", taskService.getFirstTask());
+		firstmodel.addAttribute("firstlist", taskService.getFirstNumberofTasks());
 
 		return "firstlist";
 	}
@@ -42,14 +42,14 @@ public class TaskController {
 	@GetMapping ("/secondlist")
 	public String secondlistPage(Model secondmodel) {
 
-		//TaskService secondTask = new TaskService();
+		taskService.getSecondNumberofTasks();
 		secondmodel.addAttribute("pageTitle2", "List No.2");
-		secondmodel.addAttribute("secondlist", taskService.getSecondTask());
+		secondmodel.addAttribute("secondlist", taskService.getSecondNumberofTasks());
 		
 		return "secondlist";
 		
 		
 	}
+}
 	
-	}
 

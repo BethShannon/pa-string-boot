@@ -1,8 +1,9 @@
-package uk.ac.belfastmet.NewTask.repository;
-
+package uk.ac.belfastmet.dwarfs.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import uk.ac.belfastmet.NewTask.domain.Task;
+import uk.ac.belfastmet.dwarfs.domain.Dwarf;
+
+
 
 @Repository
 /**
@@ -11,6 +12,6 @@ import uk.ac.belfastmet.NewTask.domain.Task;
  * @author SHA19171902
  *
  */
-public interface TaskRepository extends CrudRepository<Task, Long>{
 
+public interface dwarfssrepository  extends CrudRepository<Dwarf, Long>{
 }

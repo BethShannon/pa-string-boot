@@ -17,13 +17,14 @@ public class TaskService {
 	@Autowired
 	private TaskRepository taskRepository;
 	private static Logger logger = LoggerFactory.getLogger(TaskService.class);
-	private ArrayList<Task> firstTask; //Instance variable
-	private ArrayList<Task> secondTask; 
+	//private ArrayList<Task> firstTask; //Instance variable
+	//private ArrayList<Task> secondTask; 
 
 	/**
 	 * 
 	 * @return 
 	 */
+	/*
 	public ArrayList<Task> getFirstTask(){
 
 		this.firstTask = new ArrayList<Task>();
@@ -33,27 +34,43 @@ public class TaskService {
 		return this.firstTask;
 	}
 	
-	public void getNumberofTasks(){
-		logger.info("# of tasks: {}", taskRepository.count());
+	/**
+	 * Handles all SQL
+	 */
+	public Iterable<Task> getFirstNumberofTasks(){
+		logger.info("# of task: {}", taskRepository.count());
 
-		Iterable <Task> tasks = taskRepository.findAll();
-		Iterator <Task> iterator = tasks.iterator();
+		Iterable <Task> task = taskRepository.findAll();
+		Iterator <Task> iterator = task.iterator();
+	//	ArrayList<Task> tasklist = new ArrayList<Task>();
 		while(iterator.hasNext()) {
 			logger.info("{}", iterator.next().toString());
+			
 		}
+		return task;
 	}
 	/**
 	 * 
 	 * @return
 	 */
-	public ArrayList<Task> getSecondTask(){
+	
+	public Iterable<Task> getSecondNumberofTasks(){
+	
+	logger.info("# of task: {}", taskRepository.count());
 
-		this.secondTask = new ArrayList<Task>();
+		Iterable <Task> task = taskRepository.findAll();
+		Iterator <Task> iterator = task.iterator();
+		while(iterator.hasNext()) {
+			logger.info("{}", iterator.next().toString());
+		}
+		return task;
 
-		this.secondTask.add(new Task("Go to Post Office", "Post Letter", "Dad", "High Priority"));
-		this.secondTask.add(new Task("Go to vets", "Pick up Cat", "Sarah", "Medium Priority"));
-		return this.secondTask;
+
+
+	
 	}
 	
+
 }
+
 	

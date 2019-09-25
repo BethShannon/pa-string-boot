@@ -19,19 +19,18 @@ public class TaskService {
 	private static Logger logger = LoggerFactory.getLogger(TaskService.class);
 	private ArrayList<Task> firstTask; //Instance variable
 	private ArrayList<Task> secondTask; 
-	
+
 	public ArrayList<Task> getFirstTask(){
-		
+
 		this.firstTask = new ArrayList<Task>();
 
-		this.firstTask.add(new Task("Do Food Shopping", "Weekly Food Shop", "Mum", "Medium Priority", true));
-		this.firstTask.add(new Task("Revise Java for exam", "Revise", "Beth", "High Priority", false));
+		this.firstTask.add(new Task("Do Food Shopping", "Weekly Food Shop", "Mum", "Medium Priority"));
+		this.firstTask.add(new Task("Revise Java for exam", "Revise", "Beth", "High Priority"));
 		return this.firstTask;
 	}
-
 	public void getNumberofTasks(){
 		logger.info("# of tasks: {}", taskRepository.count());
-		
+
 		Iterable <Task> tasks = taskRepository.findAll();
 		Iterator <Task> iterator = tasks.iterator();
 		while(iterator.hasNext()) {
@@ -39,14 +38,12 @@ public class TaskService {
 		}
 
 	}
-
-	
 	public ArrayList<Task> getSecondTask(){
 
 		this.secondTask = new ArrayList<Task>();
 
-		this.secondTask.add(new Task("Go to Post Office", "Post Letter", "Dad", "High Priority", false));
-		this.secondTask.add(new Task("Go to vets", "Pick up Cat", "Sarah", "Medium Priority", true));
+		this.secondTask.add(new Task("Go to Post Office", "Post Letter", "Dad", "High Priority"));
+		this.secondTask.add(new Task("Go to vets", "Pick up Cat", "Sarah", "Medium Priority"));
 		return this.secondTask;
 	}
 	

@@ -16,16 +16,16 @@ public class Task {
 	private String name;
 	private String user;
 	private String priority;
-	private Boolean completionStatus;
+	//private Boolean completionStatus;
 
 
-	public Task(String description, String name, String user, String priority, Boolean completionStatus) {
+	public Task(String description, String name, String user, String priority) {
 		super();
 		this.description = description;
 		this.name = name;
 		this.user = user;
 		this.priority = priority;
-		this.completionStatus = completionStatus;
+	//	this.completionStatus = completionStatus;
 	}
 
 	@Id
@@ -66,14 +66,14 @@ public class Task {
 	public void setPriority(String priority) {
 		this.priority = priority;
 	}
-	@Column(name = "completion")
+	/*@Column(name = "completion")
 	public Boolean setCompletionStatus() {
 		return completionStatus;
 	}
 	public void getCompletionStatus(Boolean completionStatus) {
 		this.completionStatus = completionStatus;
 	}
-	
+	*/
 	
 }
 

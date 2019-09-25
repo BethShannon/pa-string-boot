@@ -20,24 +20,28 @@ public class TaskController {
 
 		return "index";
 	}
-/**
- * 
- * @param firstmodel 
- * @return
- */
+	/**
+	 * 
+	 * @param firstmodel 
+	 * @return the first list of tasks
+	 **/
 	@GetMapping ("/firstlist")
 	public String firstlistPage(Model firstmodel) {
-		
+
 		taskService.getNumberofTasks();
 		firstmodel.addAttribute("pageTitle", "List No.1");
 		firstmodel.addAttribute("firstlist", taskService.getFirstTask());
 
 		return "firstlist";
 	}
-
+	/**
+	 * 
+	 * @param secondmodel
+	 * @return the second list of tasks
+	 */
 	@GetMapping ("/secondlist")
 	public String secondlistPage(Model secondmodel) {
-		
+
 		//TaskService secondTask = new TaskService();
 		secondmodel.addAttribute("pageTitle2", "List No.2");
 		secondmodel.addAttribute("secondlist", taskService.getSecondTask());

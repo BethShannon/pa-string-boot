@@ -1,5 +1,5 @@
 package uk.ac.belfastmet.NewTask.domain;
-
+//use of logger
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table (name = "employees")
+@Table (name = "task2")
 public class Task {
 
 	private Long id;
@@ -18,7 +18,13 @@ public class Task {
 	private String priority;
 	//private Boolean completionStatus;
 
-
+/**
+ * 
+ * @param description
+ * @param name
+ * @param user
+ * @param priority
+ */
 	public Task(String description, String name, String user, String priority) {
 		super();
 		this.description = description;
@@ -35,7 +41,6 @@ public class Task {
 	}
 	public void setId(long id) {
 		this.id = id;
-
 	}
 	@Column(name = "description")
 	public String getDescription() {

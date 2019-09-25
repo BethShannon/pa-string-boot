@@ -20,6 +20,10 @@ public class TaskService {
 	private ArrayList<Task> firstTask; //Instance variable
 	private ArrayList<Task> secondTask; 
 
+	/**
+	 * 
+	 * @return 
+	 */
 	public ArrayList<Task> getFirstTask(){
 
 		this.firstTask = new ArrayList<Task>();
@@ -28,6 +32,7 @@ public class TaskService {
 		this.firstTask.add(new Task("Revise Java for exam", "Revise", "Beth", "High Priority"));
 		return this.firstTask;
 	}
+	
 	public void getNumberofTasks(){
 		logger.info("# of tasks: {}", taskRepository.count());
 
@@ -36,8 +41,11 @@ public class TaskService {
 		while(iterator.hasNext()) {
 			logger.info("{}", iterator.next().toString());
 		}
-
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public ArrayList<Task> getSecondTask(){
 
 		this.secondTask = new ArrayList<Task>();

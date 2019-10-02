@@ -12,6 +12,6 @@ import uk.ac.belfastmet.dwarfs.domain.Dwarf;
  * @author SHA19171902
  *
  */
-
+// kevin - all classes must start with a capital
 public interface dwarfssrepository  extends CrudRepository<Dwarf, Long>{
 }

@@ -1,55 +1,47 @@
 package uk.ac.belfastmet.dwarfs.service;
 
+
+//kevin - indentation, you can use shortcut Ctrl l
+
 import java.util.ArrayList;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import uk.ac.belfastmet.dwarfs.domain.Dwarf;
-
+import java.util.Iterator;
+/**
+ * The class provides services
+ * @author SHA19171902
+ *
+ */
 @Service
 public class DwarfService {
-
+	/**
+	 * eliminates the need for getters and setters
+	 */
+	//kevin - DwarfRepository doesn't exist
 	@Autowired
 	private DwarfRepository dwarfRepository;
+	//kevin - dwarfsservice doesn't exist
 	private static Logger logger = LoggerFactory.getLogger(dwarfsservice.class)
-	//private ArrayList<Dwarf> disneyDwarfs; // Instance variables
-	//private ArrayList<Dwarf> tolkienDwarfs;
+
+			/**
+			 * Count returns the amount of entities available
+			 * @return
+			 */
+			public Iterable<Dwarf> getDisneyDwarfs(){
+		logger.info("# of disney dwarfs: {}", dwarfRepository.count());
+		/**
+		 * findAll() Returns all instances of the type
+		 * for-each loop through disney dwarfs
+		 */
+		Iterable <Dwarf> disney = dwarfRepository.findAll();
+		Iterator <Dwarf> iterator = disney.iterator();
 
 
-	/*public ArrayList<Dwarf> getDisneyDwarfs(){
-
-		this.disneyDwarfs = new ArrayList<Dwarf>();
-
-		//Add dwarfs
-		this.disneyDwarfs.add(new Dwarf("Sleepy", "Disney", "Sleepy.png"));
-		this.disneyDwarfs.add(new Dwarf("Happy", "Disney", "Happy.png"));
-		this.disneyDwarfs.add(new Dwarf("Bashful", "Disney", "Bashful.png"));
-		this.disneyDwarfs.add(new Dwarf("Dopey", "Disney", "Dopey.png"));
-		this.disneyDwarfs.add(new Dwarf("Doc", "Disney", "Doc.png"));
-		this.disneyDwarfs.add(new Dwarf("Grumpy", "Disney", "Grumpy.png"));
-		this.disneyDwarfs.add(new Dwarf("Sneezy", "Disney", "Sneezy.png"));
-
-		return this.disneyDwarfs;
 
 	}
-	public ArrayList<Dwarf> getTolkienDwarfs(){
-
-		this.tolkienDwarfs = new ArrayList<Dwarf>();
-		
-		//Add dwarfs
-				this.tolkienDwarfs.add(new Dwarf("Thorin", "Tolkien", "Thorin.png"));
-				this.tolkienDwarfs.add(new Dwarf("Balin", "Tolkien", "Balin.png"));
-				this.tolkienDwarfs.add(new Dwarf("Dwalin", "Tolkien", "Dwalin.png"));
-				this.tolkienDwarfs.add(new Dwarf("Fili", "Tolkien", "Fili.png"));
-				this.tolkienDwarfs.add(new Dwarf("Kili", "Tolkien", "Kili.png"));
-				this.tolkienDwarfs.add(new Dwarf("Dori", "Tolkien", "Dori.png"));
-				this.tolkienDwarfs.add(new Dwarf("Nori", "Tolkien", "Nori.png"));
-				
-
-
-		return this.tolkienDwarfs;
-
-	}
-
 
 }

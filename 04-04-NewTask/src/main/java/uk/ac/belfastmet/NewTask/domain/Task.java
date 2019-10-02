@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+//kevin - javadoc to describe classes as well as methods
 @Entity
 @Table (name = "task")
 public class Task {

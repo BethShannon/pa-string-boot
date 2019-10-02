@@ -18,6 +18,7 @@ public class Dwarf {
 		private int age;
 		
 	//Constructors
+		
 		public Dwarf() {
 		}
 		public Dwarf(String name, String author, int age) {
